@@ -1,0 +1,6 @@
+<?php
+  requir("mysql_class.php");
+     $insert
+     = $db->insert("student","name","jay");//请把#号替换为单引号
+	   $db->dbClose();
+>
