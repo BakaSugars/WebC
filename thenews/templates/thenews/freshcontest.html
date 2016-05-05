@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block title %}新赛事{% endblock%}
+
+{% block link %}<link rel="stylesheet" href="/static/css/thenews.css">{% endblock %}
+
+{% block content %}
+<div class = 'river' ></div>
+	<div class = 'left_nav' >
+    	<ul class="nav nav-pills nav-stacked">
+       <li><a href="getnews-freshnews">新消息</a></li>
+       <li><a href="getnews-freshproblem">新题型</a></li>
+       <li><a href="getnews-freshcontest">新赛事</a></li>
+       <li><a href="getnews-freshrank">新排行</a></li>
+</ul>
+</div>
+	<div class = 'right_info'>
+    	新赛事
+    </div>
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/thenews.js"></script>
+<script src="/static/js/thenews/thenews_active3.js"></script>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block title %}题海泛舟{% endblock%}
+
+{% block link %}<link rel="stylesheet" href="static/css/thenews.css">{% endblock %}
+
+{% load bootstrap_toolkit %}
+{% block content %}
+<div class = 'river' ></div>
+<div style = "text-align: center; background-color:#E6E6E8; margin-top:0">
+	<h1 >标题：{{problem.e_name}}</h1>
+	<h5 >提交状态:<span style="color:{{color}};">{{condition}}</span></h5>
+	<h5 >提交时间:<span style="color:{{color}};">{{submittime}}</span></h5>
+	<h5 >费时:<span style="color:{{color}};">{{spendtime}}</span></h5>
+	<h5 >占用内存:<span style="color:{{color}};">{{spendspace}}</span></h5>
+	<h2>题目内容：</h2>
+	<textarea class="form-control" rows= "20" disabled = true>{{problem.contain}}</textarea>
+	<h2>输出样例：</h2>
+	<textarea class="form-control" disabled = true rows = "10">{{problem.output}}</textarea>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" 
+	   data-target="#myModal">
+	   提交代码
+	</button>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" 
+	   data-target="#myModal">
+	   题目讨论
+	</button>
+	<div class = "modal fade" id="myModal" tabindex="-1" role = "dialog" aria-labelledby = "myModalLable" aria-hidden = "true">
+	<div class="modal-dialog">
+	<div class = "modal-content">
+	<div class = "modal-header">
+	<button type = "button" class = "close" data-dismiss = "modal" aria-hidden="true">×</button>
+	<h4 class = "modal-title" id = "myModalLabel">
+	代码输入框，在此输入代码：</h4>
+	<div class = "modal-body">
+	C/C++语言
+	</div>
+	<form method = 'post' >
+	{% csrf_token %}
+	<textarea class = "form-control" rows = "30" name = coding>coding there</textarea>
+	<input type="submit" class="btn btn-primary" value = "提交代码">
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block script %}
+<script src="/static/js/challenge.js"></script>
+{% endblock %}

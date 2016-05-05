@@ -1,0 +1,25 @@
+﻿{% extends 'base/base.html' %}
+
+{% block title %}拓展提高-华山论剑{% endblock%}
+
+{% block link %}<link rel="stylesheet" href="/static/css/thenews.css">{% endblock %}
+
+{% block content %}
+<div class = 'river' ></div>
+	<div class = 'left_nav' >
+    	<ul class="nav nav-pills nav-stacked">
+       <li><a href="../getcontest-getHomework">每日作业</a></li>
+       <li><a href="../getcontest-getNewProblem">新题抢先</a></li>
+       <li><a href="../getcontest-getImprove">拓展提高</a></li>
+       <li><a href="../getcontest-getRankImprove">冲击榜单</a></li>
+</ul>
+</div>
+	<div class = 'right_info'>
+    	拓展提高
+    </div>
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/getcontest.js"></script>
+<script src="/static/js/thenews/thenews_active3.js"></script>
+{% endblock %}
