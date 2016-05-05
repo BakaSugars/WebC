@@ -3,3 +3,4 @@
 # the WebC is my first project by Django
 # thanks for all cast in 522
 # mainly coding by Shu JingWei and Sun ZiLi
+# now we use git in sublime
