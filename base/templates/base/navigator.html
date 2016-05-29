@@ -1,5 +1,5 @@
 
-    <div style="width:100%; height:40px; background-color:#06F; text-align:center; line-height:25px; ">
+    <div style="width:100%; height:40px; background-color:#06F; text-align:center; line-height:25px; box-shadow: 10px 10px 5px #888888;">
 	{% if request.user.is_authenticated %}
 		<p>勇敢的{{ request.user.first_name}}{{request.user.last_name}},欢迎来到WEB|||C<a href = "/logout" style ="color:red">注销</a></p>
 	{% else %}
@@ -7,8 +7,8 @@
 	{% endif %}
 	</div>
 	<ul class="nav nav-pills nav-justified">
-    <li><a href="../getnews">最新动态</a></li>
-    <li><a href="../getchallenge">题海泛舟</a></li>
-    <li><a href="../getcontest">华山论剑</a></li>
-    <li><a href="../getcontestdata">赛事总览</a></li>
-    <li><a href="../getlink">相关链接</a></li>
+    <li class="shadow"><a href="../getnews">最新动态</a></li>
+    <li class="shadow"><a href="../getchallenge">题海泛舟</a></li>
+    <li class="shadow"><a href="../getcontest">华山论剑</a></li>
+    <li class="shadow"><a href="../getcontestdata">赛事总览</a></li>
+    <li class="shadow"><a href="../getlink">相关链接</a></li>

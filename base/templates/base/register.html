@@ -18,18 +18,13 @@
 		});
 	});	  
 });
-	function check(){ 
-       var password = document.getElementById("id_password").value; 
-       var repsword = document.getElementById("repsword").value; 
-       if(password != repsword) {
-        alert("两次密码不同，请重新输入");
-		
-         return false;
-          }
-       else {
-           return true;
-          }
-    }
+    $("#repsword").on('blur', function () {
+    	if(("#id_password").val()!==$("#repsword").val()){
+    		alert("两次密码不同，请重新输入");
+    		$("#id_password").val("");
+    		$("#repsword").val("");
+    	}
+    });
 	{% if password_is_wrong %}
         alert("用户名或者密码错误")
     {% endif %}  
